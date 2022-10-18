@@ -2,9 +2,7 @@ body {
    display: flex;
    flex-direction: row;
    justify-content: center;
-   align-items: center;
-   overflow: hidden;
-   height: 100vh;
+   align-items: center;   
    font-family: 'Roboto', sans-serif;
    background: #181930;
 }
@@ -22,7 +20,7 @@ body {
    min-width: 600px;
    max-width: 900px;
    width: calc(100% - 100px);
-   height: 400px;
+   height: 350px;
 }
 .option {
    position: relative;
