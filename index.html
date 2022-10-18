@@ -13,7 +13,7 @@
 <body>
 <!-- partial:index.partial.html -->
 <div class="options">
-   <div class="option active" style='--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);'>
+   <div class="option active" id="1" style='--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);'>
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -25,7 +25,7 @@
          </div>
       </div>
    </div>
-   <div class="option" style='--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);'>
+   <div class="option" id="2" style='--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);'>
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -37,7 +37,7 @@
          </div>
       </div>
    </div>
-   <div class="option" style='--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);'>
+   <div class="option" id="3" style='--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);'>
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -49,7 +49,7 @@
          </div>
       </div>
    </div>
-   <div class="option" style='--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);'>
+   <div class="option" id="4" style='--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);'>
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -61,7 +61,7 @@
          </div>
       </div>
    </div>
-   <div class="option" style='--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);'>
+   <div class="option" id="5" style='--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);'>
       <div class="shadow"></div>
       <div class="label">
          <div class="icon">
@@ -77,30 +77,35 @@
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
   
-  <script>
+  <script>     
       
-      
-      
-      
-      var container1 = document.querySelector('.option.active');
+      var container1 = document.getElementById('1');
+      var container2 = document.getElementById('2');
+      var container3 = document.getElementById('3');
+      var container4 = document.getElementById('4');
+      var container5 = document.getElementById('5');
       
       const urlParams = new URLSearchParams(window.location.search);
-      const img1 = urlParams.get ("1");
+      const img1 = "url('"+ urlParams.get ("1") +"')";
       
       const url= new URLSearchParams(window.location.search);
-      const img2 = url.get ("2");
+      const img2 = "url('"+ url.get ("2") +"')";
       
       const urlP = new URLSearchParams(window.location.search);
-      const img3 = urlP.get ("3");
+      const img3 = "url('"+ urlP.get ("3") +"')";
       
       const Params = new URLSearchParams(window.location.search);
-      const img4 = Params.get ("4");
+      const img4 = "url('"+ Params.get ("4") +"')";
       
       const ams = new URLSearchParams(window.location.search);
       const img5 = "url('"+ ams.get ("5") +"')";
       
       
-      container1.style.backgroundImage = img5;
+      container1.style.backgroundImage = img1;
+      container2.style.backgroundImage = img2;
+      container3.style.backgroundImage = img3;
+      container4.style.backgroundImage = img4;
+      container5.style.backgroundImage = img5;
       
   </script>
 
